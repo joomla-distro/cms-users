@@ -12,6 +12,9 @@
             "homepage": ""
         }
     ],
+    "autoload": {
+        "psr-0": {"\\Component\\Users": "src"}
+    },
     "require": {
         "joomla-distro/joomla-distro-core": "*",
     }
