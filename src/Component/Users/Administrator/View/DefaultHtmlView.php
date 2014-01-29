@@ -19,7 +19,10 @@ class DefaultHtmlView extends AbstractHtmlView
             }
         }
 
-        $q->insert(JPATH_WEB.'/template/html/', 1);
+        $q->insert(JPATH_WEB.'/template'. $this->application->get('default.theme') .'/html/', 1);
+
+        print_r($q);
+        die();
 
         parent::__construct($model, $q);
     }

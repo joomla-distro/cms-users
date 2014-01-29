@@ -11,7 +11,7 @@ use Joomla\Controller\ControllerInterface;
 use Joomla\DI\Container;
 use Joomla\DI\ContainerAwareInterface;
 
-use Component\Users\Administrator\Router\Router;
+use Component\Users\Administrator\Router\ComponentRouter;
 
 /**
  * Application class
@@ -53,9 +53,11 @@ final class Dispatcher extends AbstractWebApplication implements ContainerAwareI
         try
         {
             // Instantiate the router
-            $router = new Router($this->input, $this);
+            $router = new ComponentRouter($this->input, $this);
 
-            $routes_path = JPATH_COMPONENT . '/routes/administrator.json';
+            $root_path = dirname(dirname(dirname(dirname(__DIR__))));
+
+            $routes_path = $root_path . '/routes/administrator.json';
             if (!file_exists($routes_path)) {
                 $routes = '{}';
             } else {

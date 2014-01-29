@@ -17,7 +17,7 @@ use Joomla\Router\Router;
  *
  * @since  1.0
  */
-class Router extends Router
+class ComponentRouter extends Router
 {
     /**
      * Application object to inject into controllers
