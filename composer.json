@@ -13,7 +13,7 @@
         }
     ],
     "autoload": {
-        "psr-0": {"\\Component\\Users": "src"}
+        "psr-0": {"Component\\Users": "src"}
     },
     "require": {
         "joomla-distro/joomla-distro-core": "*",
