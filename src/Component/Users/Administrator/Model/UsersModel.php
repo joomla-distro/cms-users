@@ -18,6 +18,18 @@ class UsersModel extends DefaultModel
 {
 	public function getAll()
 	{
+		$users = array();
+
+		$db = $this->application->getContainer()->get('db');
+
+		if ($db->connected()) {
+			$query = $db->getQuery(true);
+			$query->select('username')->from('#__users');
+
+			$db->setQuery($query);
+			$users = $db->loadObjectList();
+		}
 		
+		return $users;
 	}
 }

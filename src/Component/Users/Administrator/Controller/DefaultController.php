@@ -125,14 +125,12 @@ class DefaultController extends AbstractController implements ContainerAwareInte
         try
         {
             // Render our view.
-            return $view->render();
+            echo $view->render();
         }
         catch (\Exception $e)
         {
             throw new \RuntimeException(sprintf('Error: ' . $e->getMessage()));
         }
-
-        return;
     }
 
     /**
