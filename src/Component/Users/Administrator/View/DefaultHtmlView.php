@@ -23,7 +23,7 @@ class DefaultHtmlView extends AbstractHtmlView
 
         $q->insert(JPATH_WEB.'/template/'. $this->application->getContainer()->get('config')->get('default.theme') .'/html/administrator/com_users', 1);
         $q->insert(JPATH_WEB.'/template/'. $this->application->getContainer()->get('config')->get('default.theme') .'/html/com_users', 2);
-        $q->insert($root_dir .'/layouts/', 3);
+        $q->insert($root_dir .'/layouts/administrator/', 3);
 
         parent::__construct($model, $q);
     }

@@ -99,18 +99,6 @@ final class Dispatcher extends AbstractWebApplication implements ContainerAwareI
     }
 
     /**
-     * Get a Language object
-     *
-     * @return  Language
-     *
-     * @since   1.0
-     */
-    public function getLanguage()
-    {
-        return Language::getInstance();
-    }
-
-    /**
      * Set the DI container.
      *
      * @param   Container  $container  The DI container.
